@@ -6,19 +6,21 @@
     box-sizing: border-box;
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    /* border: 1px solid red; */
 }
 
-html,body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
 /* *************************************************  Cursor *************************************************************** */
-.cursor{
+.cursor {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -29,11 +31,11 @@ body::-webkit-scrollbar{
     mix-blend-mode: difference;
 }
 
-.main{
+.main {
     background-color: #111;
 }
 
-#nav{
+#nav {
     height: 60px;
     width: 100%;
     display: flex;
@@ -44,64 +46,69 @@ body::-webkit-scrollbar{
     z-index: 12;
 }
 
-#nav-p2{
+#nav-p2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-#nav-p3 .circle{
+#nav-p3 .circle {
     height: 20px;
     width: 20px;
     background-color: #fff;
     border-radius: 50%;
 }
 
-#nav-p2 h4:nth-child(1){
+#nav-p2 h4:nth-child(1) {
     border-bottom: 2px solid #fff;
 }
+
 /* *************************************************  Page 1  *************************************************************** */
-#page1{
+#page1 {
     min-height: 100vh;
     width: 100%;
     position: relative;
 }
-#page1 h1{
+
+#page1 h1 {
     font-size: 8vw;
     font-weight: 500;
     margin-top: 10vw;
     margin-left: 8vw;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 95%);
+    /* opacity: 0; */
 }
-#page1 h2{
+
+#page1 h2 {
     font-size: 8vw;
     font-weight: 500;
     margin-left: 22vw;
+    /* opacity: 0; */
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 80%);
 }
 
-.char{
+.char {
     transform: translateY(180px);
 }
 
-#page1 .video{
+#page1 .video {
     width: 60%;
     position: relative;
     margin-top: 5vw;
-    left: 50%;
-    transform: translate(-50%,0);
+    margin-left: 20%;
 }
-.video video{
+.video video {
     width: 100%;
-    
 }
-.video #v-p1{
+
+.video #v-p1 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 3px;
 }
-.video #v-p1 p{
+
+.video #v-p1 p {
     text-transform: uppercase;
     font-size: 0.7vw;
     letter-spacing: -0.5px;
@@ -110,7 +117,7 @@ body::-webkit-scrollbar{
 
 /* *************************************************  Page 2  *************************************************************** */
 
-#page2{
+#page2 {
     min-height: 90vh;
     width: 100%;
     margin-top: 7vw;
@@ -119,14 +126,14 @@ body::-webkit-scrollbar{
     /* padding-left: 2vw; */
 }
 
-#page2 h1{
+#page2 h1 {
     font-size: 8vw;
     font-weight: 400;
-    color:#111;
+    color: #111;
     margin-left: 5vw;
 }
 
-#page2 #p2-con{
+#page2 #p2-con {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,11 +143,12 @@ body::-webkit-scrollbar{
     /* background-color: red; */
 }
 
-#p2-con .p2-left{
+#p2-con .p2-left {
     /* background-color: blue; */
     width: 30%;
 }
-#p2-con .p2-right{
+
+#p2-con .p2-right {
     /* background-color: blue; */
     width: 30%;
     height: 50%;
@@ -148,21 +156,22 @@ body::-webkit-scrollbar{
 
 
 
-#p2-con .p2-left h3{
+#p2-con .p2-left h3 {
     font-size: 3.5vw;
     font-weight: 300;
     line-height: 1.1;
-    color:#111;
+    color: #111;
 
 }
-.p2-right p{
+
+.p2-right p {
     font-size: 1.3vw;
     font-weight: 300;
-    color:#000000;
+    color: #000000;
 
 }
 
-.p2-right button{
+.p2-right button {
     width: 100%;
     border-radius: 50px;
     border: none;
@@ -174,30 +183,30 @@ body::-webkit-scrollbar{
 
 /* *************************************************  Page 3  *************************************************************** */
 
-#page3{
-    height: 80vh;
+#page3 {
+    height: 100vh;
     width: 100%;
     margin-top: 5vw;
     border-bottom: 2px solid rgb(201, 195, 195);
 }
 
-#page3 h1{
+#page3 h1 {
     font-size: 8vw;
     font-weight: 500;
-    color:#000;
+    color: #000;
     margin-left: 5vw;
 }
 
-#page3 .scroller{
+#page3 .scroller {
     height: 6vw;
     width: 100%;
     margin-top: 5vw;
     display: flex;
 }
 
-.scroller .cont{
+.scroller .cont {
     /* width: fit-content; */
-    display:flex;
+    display: flex;
     align-items: center;
     /* gap: 8vw; */
     flex-shrink: 0;
@@ -210,12 +219,12 @@ body::-webkit-scrollbar{
     animation-iteration-count: infinite;
 }
 
-.cont h3{
+.cont h3 {
     font-size: 3vw;
     font-weight: 400;
-    color:#000;
+    color: #000;
     text-transform: uppercase;
-    padding:0 5vw; 
+    padding: 0 5vw;
     border-right: #6e6868 2px solid;
     white-space: nowrap;
 }
@@ -224,6 +233,7 @@ body::-webkit-scrollbar{
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -231,52 +241,54 @@ body::-webkit-scrollbar{
 
 /* *************************************************  Page 4  *************************************************************** */
 
-#page4{
-    height: 150vh;
+#page4 {
+    height: 200vh;
     width: 100%;
-    margin-top: 5vw;
+
     /* background-color:red; */
+    /* border: 1px solid red; */
 }
 
-#page4 h1{
+#page4 h1 {
     font-size: 7vw;
     color: #000;
     font-weight: 500;
     padding-left: 7vw;
+    margin-top: 5vw;
 }
-#page4 span{
+
+#page4 span {
     font-size: 7vw;
     color: #000;
     font-weight: 500;
     padding-left: 4vw;
 }
 
-#page4>div>div>div>div{
+#page4>div>div>div>div {
     color: #000;
 }
-
-
 
 
 
 .swiper {
     width: 100%;
     height: 100vh;
-  }
+    border: 1px solid red;
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     /* background-color: green;/ */
     display: block;
     width: 100%;
     height: 400px;
     object-fit: cover;
-  }
+}

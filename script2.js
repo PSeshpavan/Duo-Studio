@@ -46,9 +46,13 @@ cursor()
 function start() {
     let text = new SplitType(".hero");
     var time = gsap.timeline();
+    time.from("#page1 h1,#page1 h2", {
+        opacity: 0,
+    });
     time.to(".char", {
         y: 0,
         duration: 1.5,
+        opacity:1,
         // ease:"power2.out",
     }, "start");
     time.to("#page1 h1,#page1 h2", {
@@ -86,6 +90,7 @@ function page1() {
 
     tl.to("#page1 .video", {
         width: "97%",
+        x:"-19%"
     }, "p1")
 }
 page1()
@@ -169,12 +174,13 @@ var swiper = new Swiper(".mySwiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+
 });
