@@ -19,6 +19,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+#page1,#page2,#page3,#page4,#footer{
+    overflow: hidden;
+}
+
 
 
 /* *************************************************  Cursor *************************************************************** */
@@ -143,6 +147,7 @@ body::-webkit-scrollbar {
     /* margin-left: 6vw; */
     border-bottom: 2px solid rgb(201, 195, 195);
     /* padding-left: 2vw; */
+
 }
 
 #page2 h1 {
@@ -198,15 +203,22 @@ body::-webkit-scrollbar {
     background-color: #edbfff;
     color: black;
     margin-top: 25px;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.p2-right button:hover {
+    background-color: #8c53a2;
+    color: rgb(255, 255, 255);
 }
 
 /* *************************************************  Page 3  *************************************************************** */
 
 #page3 {
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     margin-top: 5vw;
     position: relative;
+    overflow: hidden;
     border-bottom: 2px solid rgb(201, 195, 195);
 }
 
@@ -219,7 +231,7 @@ body::-webkit-scrollbar {
 
 #page3 .scroller {
     height: 6vw;
-    width: 100%;
+    width: 90%;
     margin-top: 5vw;
     display: flex;
 }
