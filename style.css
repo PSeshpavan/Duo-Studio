@@ -203,7 +203,7 @@ body::-webkit-scrollbar {
     background-color: #edbfff;
     color: black;
     margin-top: 25px;
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transition: ease .4s background ;
 }
 
 .p2-right button:hover {
