@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="cursor"></div>
-
+    <div class="mob">
+        <h1>This Website was built to be viewed only on the Desktop.</h1>
+    </div>
     <div class="main">
 
         <div id="page1">
@@ -36,11 +38,10 @@
                     <p>a creative digital studio</p>
                     <p>based on washington , dc</p>
                 </div>
-                <video autoplay muted loop
-                    src="https://player.vimeo.com/progressive_redirect/playback/850752787/rendition/360p/file.mp4?loc=external&oauth2_token_id=57447761&signature=21b2cc8986a7e0cd6dcd105ee962b3ae665d3cd12b93af690d6c6752621cbe41"></video>
+                <video autoplay muted loop src="./herovid.mp4"></video>
+                <!-- src="https://player.vimeo.com/progressive_redirect/playback/850752787/rendition/360p/file.mp4?loc=external&oauth2_token_id=57447761&signature=21b2cc8986a7e0cd6dcd105ee962b3ae665d3cd12b93af690d6c6752621cbe41" -->
             </div>
         </div>
-
         <div id="page2">
             <h1>We are Duo Studio,</h1>
             <div id="p2-con">
@@ -59,7 +60,6 @@
                 </div>
             </div>
         </div>
-
         <div id="page3">
             <h1>Services Provided</h1>
             <div class="scroller">
@@ -82,31 +82,49 @@
         <div id="page4">
             <h1>Our Customers <br><span> Say That</span> </h1>
             <div class="carousel">
-
-
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">
+                            <img src="https://marketplace.canva.com/EAFxVILyAMI/1/0/1600w/canva-blue-and-white-digitalism-testimonial-instagram-post-qnPvVbnYCQg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://marketplace.canva.com/EAFxVILyAMI/1/0/1600w/canva-blue-and-white-digitalism-testimonial-instagram-post-qnPvVbnYCQg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://marketplace.canva.com/EAFxVILyAMI/1/0/1600w/canva-blue-and-white-digitalism-testimonial-instagram-post-qnPvVbnYCQg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://marketplace.canva.com/EAFxVILyAMI/1/0/1600w/canva-blue-and-white-digitalism-testimonial-instagram-post-qnPvVbnYCQg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://marketplace.canva.com/EAFxVILyAMI/1/0/1600w/canva-blue-and-white-digitalism-testimonial-instagram-post-qnPvVbnYCQg.jpg" alt="">
+                        </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-
             </div>
-            <div id="footer"></div>
-
         </div>
+        <div id="footer">
+            <div id="footer-p1">
+                <h2>Let’s create something <br> amazing together</h2>
+            </div>
+            <!-- <div id="footer-p2">
+                <p>© 2021 Duo Studio</p>
+            </div> -->
+            <div id="footer-p3">
+                <h5>Home</h5>
+                <h5>Work</h5>
+                <h5>Studio</h5>
+                <h5>Contact</h5>
+            </div>
+            
+        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+                <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
             integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
@@ -119,7 +137,9 @@
         <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="./script2.js"></script>
+
+
+        <script type="module" src="./script2.js"></script>
 </body>
 
 </html>

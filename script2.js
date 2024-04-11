@@ -1,29 +1,65 @@
-function init() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector(".main"),
-        smooth: true
-    });
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    ScrollTrigger.scrollerProxy(".main", {
-        scrollTop(value) {
-            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-        getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-        },
-        pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
-    });
+var main = document.querySelector(".main")
 
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// gsap.registerPlugin(ScrollTrigger);
+// function init() {
 
-    ScrollTrigger.refresh();
+//     //     // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-}
-init()
+//     //     const locoScroll = new LocomotiveScroll({
+//     //         el: document.querySelector(".main"),
+//     //         smooth: true
+//     //     });
+
+//     //     locoScroll.on("scroll", ScrollTrigger.update);
+
+//     //     ScrollTrigger.scrollerProxy(".main", {
+//     //         scrollTop(value) {
+//     //             return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//     //         }, 
+//     //         getBoundingClientRect() {
+//     //             return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+//     //         },
+//     //         pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+//     //     });
+
+//     //     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+//     //     ScrollTrigger.refresh();
+
+
+
+//     // const scroll = new LocomotiveScroll({
+//     //     el: document.querySelector('.main'),
+//     //     smooth: true
+//     // });
+//     // Initialize ScrollTrigger
+//     // gsap.registerPlugin(ScrollTrigger);
+
+//     // Initialize Locomotive scroll
+//     const locomotive = new LocomotiveScroll({
+//         el: document.querySelector(".main"),
+//         smooth: true,
+//         multiplier: 1.0,
+//         getDirection: true,
+//     });
+
+//     // Update ScrollTrigger every time the user scrolls using Locomotive
+//     locomotive.on("scroll", () => {
+//         ScrollTrigger.update();
+//     });
+
+//     // Initialize ScrollTrigger with the Locomotive scroll container
+//     ScrollTrigger.defaults({
+//         scroller: ".main",
+//     });
+
+//     // Initialize your animations here
+//     // ...
+
+// }
+
+// init()
 
 
 
@@ -34,11 +70,15 @@ init()
 
 function cursor() {
     var crsr = document.querySelector(".cursor")
-    var main = document.querySelector(".main")
+
     document.addEventListener("mousemove", function (dets) {
         crsr.style.left = dets.x + "px",
             crsr.style.top = dets.y + "px"
-    })
+    });
+    document.addEventListener("scroll", function (dets) {
+        crsr.style.left = dets.x + "px",
+            crsr.style.top = dets.y + "px"
+    });
 }
 cursor()
 
@@ -52,7 +92,7 @@ function start() {
     time.to(".char", {
         y: 0,
         duration: 1.5,
-        opacity:1,
+        opacity: 1,
         // ease:"power2.out",
     }, "start");
     time.to("#page1 h1,#page1 h2", {
@@ -72,7 +112,7 @@ function page1() {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#page1 h1",
-            scroller: ".main",
+            // scroller: ".main",
             // markers:true,
             start: "top 27%",
             end: "top 5%",
@@ -90,7 +130,7 @@ function page1() {
 
     tl.to("#page1 .video", {
         width: "97%",
-        x:"-19%"
+        x: "-19%"
     }, "p1")
 }
 page1()
@@ -99,11 +139,11 @@ page1()
 function page2() {
     var tl2 = gsap.timeline({
         scrollTrigger: {
-            trigger: "#page1 h1",
-            scroller: ".main",
+            trigger: "#page2",
+            // scroller: ".main",
             // markers:true,
-            start: "top -125%",
-            end: "top -140%",
+            start: "top 30%",
+            end: "bottom 70%",
             scrub: 3,
         },
     });
@@ -128,44 +168,6 @@ function page2() {
     }, "p2");
 }
 page2()
-
-
-function page3() {
-    var tl3 = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#page1 h1",
-            scroller: ".main",
-            // markers:true,
-            start: "top -230%",
-            end: "top -240%",
-            scrub: 3,
-        },
-    });
-    tl3.to(".main", {
-        // backgroundColor:"#000",
-    }, "p3");
-}
-page3()
-
-function page4() {
-    var tl4 = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#page1 h1",
-            scroller: ".main",
-            // markers:true,
-            start: "top -320%",
-            end: "top -330%",
-            scrub: 3,
-        },
-    });
-    tl4.to(".main", {
-        backgroundColor: "#fff",
-
-    }, "p4");
-
-    
-}
-page4()
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
